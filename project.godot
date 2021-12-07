@@ -12,7 +12,12 @@ config_version=4
 
 config/name="2D Platformer Course"
 run/main_scene="res://scenes/Main.tscn"
+boot_splash/image="res://icon.png"
+boot_splash/fullsize=false
+boot_splash/use_filter=false
+boot_splash/bg_color=Color( 0.12549, 0.12549, 0.137255, 1 )
 config/icon="res://icon.png"
+config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
@@ -20,6 +25,7 @@ LevelManager="*res://scenes/LevelManager.tscn"
 Helpers="*res://scripts/helpers.gd"
 ScreenTransitionManager="*res://scripts/ScreenTransitionManager.tscn"
 MouseCursor="*res://scenes/UI/MouseCursor.tscn"
+MusicPlayer="*res://scenes/MusicPlayer.tscn"
 
 [display]
 
@@ -52,6 +58,10 @@ texture={
 "size_limit": 0,
 "stream": false,
 "svg/scale": 1.0
+}
+ogg_vorbis={
+"loop": false,
+"loop_offset": 0
 }
 
 [input]

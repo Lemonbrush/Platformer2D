@@ -52,6 +52,7 @@ func change_state(newState):
 
 func process_dash(delta):
 	if (isStateNew):
+		$DashAudioStreamPlayer.play()
 		$DashParticles.emitting = true
 		$"/root/Helpers".apply_camera_shake(0.75)
 		$DashArea/CollisionShape2D.disabled = false
@@ -166,6 +167,7 @@ func spawn_footsteps(scale = 1):
 	get_parent().add_child(footstep)
 	footstep.scale = Vector2.ONE * scale
 	footstep.global_position = global_position
+	$FootstepAudioPlayer.play()
 	
 func disable_player_input():
 	change_state(State.INPUT_DISABLED)
